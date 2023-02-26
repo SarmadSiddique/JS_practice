@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../helloreact"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "JavaScript Practice"
+	}
+}
