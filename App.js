@@ -29,27 +29,29 @@
 // console.log(square());
 // IIFEs (Immediately invoked function execution)----
 
-(function () {
-    console.log("hello IIFE")
-})();
-let person = {
-    firstName: 'sarmad',
-    lastName: 'Doe'
-};
+// const { forEach } = require("lodash");
 
-(function () {
-    console.log(person.firstName + ' ' + person.lastName);
-})(person);
+// (function () {
+//     console.log("hello IIFE")
+// })();
+// let person = {
+//     firstName: 'sarmad',
+//     lastName: 'Doe'
+// };
+
+// (function () {
+//     console.log(person.firstName + ' ' + person.lastName);
+// })(person);
 // loops------
 // Traditional for loop---
-const array = ["fruits", 3, "apple", 4, "mango", 87, 56];
-for (let i = 0; i < array.length; i++) {
-    console.log(array[i])
-}
+// const array = ["fruits", 3, "apple", 4, "mango", 87, 56];
+// for (let i = 0; i < array.length; i++) {
+//     console.log(array[i])
+// }
 // for in loop---
-for (const key in array) {
-    console.log(key, "for in loop")
-}
+// for (const key in array) {
+//     console.log(key, "for in loop")
+// }
 // iterate Strings by using for in loop----
 // var intro = ["My Name is Sarmad"]
 // intro.push("siddique")
@@ -77,33 +79,33 @@ for (const key in array) {
 // console.log(output);
 // console.log(arr."original array")
 // forEach , map and filter difference
-var students = [{
-    name: "Mike",
-    track: "track-a",
-    achievements: 23,
-    points: 400,
-},
-{
-    name: "james",
-    track: "track-a",
-    achievements: 2,
-    points: 21,
-},
-]
+// var students = [{
+//     name: "Mike",
+//     track: "track-a",
+//     achievements: 23,
+//     points: 400,
+// },
+// {
+//     name: "james",
+//     track: "track-a",
+//     achievements: 2,
+//     points: 21,
+// },
+// ]
 
 // const { func } = require("prop-types");
 
 
 // const { func } = require("prop-types")
 
-let val = students.forEach(myFunction);
-function myFunction(item, index, arr) {
-    console.log(item.name)
-    console.log(item.track)
-    console.log(item.achievements)
-    console.log(item.points)
-}
-console.log(val)
+// let val = students.forEach(myFunction);
+// function myFunction(item, index, arr) {
+//     console.log(item.name)
+//     console.log(item.track)
+//     console.log(item.achievements)
+//     console.log(item.points)
+// }
+// console.log(val)
 // console.log(students)
 // sorting array of objects on different logics----
 // var date1 = new Date("2001-03-25");
@@ -155,146 +157,148 @@ console.log(val)
 // console.log(name,newalph ,"sort method");
 // they are laughing at me i am tired of coding now i receive many disappointments from this field
 // Asynchronous Javascript---
-console.log("Asynchronous JAVASCRtrueIPT")
+console.log("Asynchronous JAVASCRIPT")
 // ajax and text file data---
-document.getElementById('btn').addEventListener('click', data)
-function data() {
-    const xhr = new XMLHttpRequest();
+// document.getElementById('btn').addEventListener('click', data)
+// function data() {
+//     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'server.txt', true);
+//     xhr.open('GET', 'server.txt', true);
 
-    xhr.onload = function aa() {
-        // console.log(this)
-        // function inner() {
-        //     if (this.status === 200) {
-        //         console.log('DONE: ', this.responseText);
-        //         console.log(this.status)
-        //     }
-        // }
-        // inner()
-        const inner = () => {
-            if (this.status === 200) {
-                document.getElementById("data").innerHTML = this.responseText;
+//     xhr.onload = function aa() {
+//         // console.log(this)
+//         // function inner() {
+//         //     if (this.status === 200) {
+//         //         console.log('DONE: ', this.responseText);
+//         //         console.log(this.status)
+//         //     }
+//         // }
+//         // inner()
+//         const inner = () => {
+//             if (this.status === 200) {
+//                 document.getElementById("data").innerHTML = this.responseText;
 
-                console.log('DONE: ', this.responseText);
-                console.log(this.status)
-            }
-        }
-        inner()
+//                 console.log('DONE: ', this.responseText);
+//                 console.log(this.status)
+//             }
+//         }
+//         inner()
 
-    };
+//     };
 
-    xhr.send();
-}
+//     xhr.send();
+// }
 // ajax and json ----
-document.getElementById('jsondata').addEventListener('click', Jdata)
-function Jdata() {
-    const xhr = new XMLHttpRequest();
+// document.getElementById('jsondata').addEventListener('click', Jdata)
+// function Jdata() {
+//     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'server.json', true);
-    xhr.onload = function bb() {
-        const inner = () => {
-            if (this.status === 200) {
-                let output = JSON.parse(this.responseText);
-                document.getElementById("data2").innerHTML = `
-        <ul>
-        <li>${output.id}</li>
-        <li>${output.name}</li>
-        <li>${output.class}</li>
-        <li>${output.subject}</li>
-    </ul>
-                    `;
+//     xhr.open('GET', 'server.json', true);
+//     xhr.onload = function bb() {
+//         const inner = () => {
+//             if (this.status === 200) {
+//                 let output = JSON.parse(this.responseText);
+//                 document.getElementById("data2").innerHTML = `
+//         <ul>
+//         <li>${output.id}</li>
+//         <li>${output.name}</li>
+//         <li>${output.class}</li>
+//         <li>${output.subject}</li>
+//     </ul>
+//                     `;
 
-                console.log('DONE: ', this.responseText);
-                console.log(this.status)
-            }
-        }
-        inner()
+//                 console.log('DONE: ', this.responseText);
+//                 console.log(this.status)
+//             }
+//         }
+//         inner()
 
-    };
+//     };
 
-    xhr.send();
+//     xhr.send();
 
-}
+// }
 // ajax and external Api----
-document.getElementById('jokes').addEventListener('click', getJokes)
-function getJokes(e) {
-    e.preventDefault();
-    const val = document.getElementById("input").value
-    console.log(val)
-    const xhr = new XMLHttpRequest();
+// document.getElementById('jokes').addEventListener('click', getJokes)
+// function getJokes(e) {
+//     e.preventDefault();
+//     const val = document.getElementById("input").value
+//     console.log(val)
+//     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', `https://pokeapi.co/api/v2/pokemon/${val}`, true);
+//     xhr.open('GET', `https://pokeapi.co/api/v2/pokemon/${val}`, true);
 
-    xhr.onload = function cc() {
+//     xhr.onload = function cc() {
 
-        const inner = () => {
-            if (this.status === 200) {
-                let pokemon = JSON.parse(this.responseText)
-                console.log('DONE: ', pokemon);
-                document.getElementById("data2").innerHTML = `
-                
-        <ul>
-        <li>${pokemon.name}</li>
-        <li>${pokemon.moves[1].move.name}</li>
-        <li>my height is ${pokemon.height} </li >
-    </ul >
-            `;
-            }
-        }
-        inner()
+//         const inner = () => {
+//             if (this.status === 200) {
+//                 let pokemon = JSON.parse(this.responseText)
+//                 console.log('DONE: ', pokemon);
+//                 document.getElementById("data2").innerHTML = `
 
-    };
-    xhr.send();
-}
+//         <ul>
+//         <li>${pokemon.name}</li>
+//         <li>${pokemon.moves[1].move.name}</li>
+//         <li>my height is ${pokemon.height} </li >
+//     </ul >
+//             `;
+//             }
+//         }
+//         inner()
+
+//     };
+//     xhr.send();
+// }
 // callback functions---
 // creating and getting data asynchronously---
-const admStudent = [
-    {
-        reg_no: 8347872,
-        stu_name: "Jhon",
-        stu_subject: "Python"
-    },
-    {
-        reg_no: 4034999,
-        stu_name: "Jack",
-        stu_subject: "React"
-    }
-]
+// const admStudent = [
+//     {
+//         reg_no: 8347872,
+//         stu_name: "Jhon",
+//         stu_subject: "Python"
+//     },
+//     {
+//         reg_no: 4034999,
+//         stu_name: "Jack",
+//         stu_subject: "React"
+//     }
+// ]
 
-const create_data = (new_data, callback) => {
-    setTimeout(() => {
-        admStudent.push(new_data)
-        console.log(admStudent)
-        callback()
-    }, 3000)
-}
+// // const create_data = (new_data, callback) => {
 
-const get_data = () => {
-    setTimeout(() => {
-        var output = admStudent.forEach(func)
-        function func(adm) {
-            document.getElementById("admissions").innerHTML = output += `
+// //     setTimeout(() => {
+// //         admStudent.push(new_data)
+// //         callback()
+
+// //         console.log(admStudent)
+// //     }, 3000)
+// // }
+
+// // const get_data = () => {
+// //     setTimeout(() => {
+// //         var output = admStudent.forEach(func)
+// //         function func(adm) {
+// //             document.getElementById("admissions").innerHTML = output += `
 
 
-<ul>
-    <li>${adm.stu_name}</li>
-    <li>${adm.reg_no}</li>
-    <li>${adm.stu_subject}</li>
+// // <ul>
+// //     <li>${adm.stu_name}</li>
+// //     <li>${adm.reg_no}</li>
+// //     <li>${adm.stu_subject}</li>
 
-</ul>
-        `
-        }
-        console.log("data has been retrieved")
-    }, 1000)
-}
-create_data({
-    reg_no: 999884111,
-    stu_name: "Jimmy",
-    stu_subject: "Angular"
-}, get_data);
+// // </ul>
+// //         `
+// //         }
+// //         console.log("data has been retrieved")
+// //     }, 1000)
+// // }
+// // create_data({
+// //     reg_no: 999884111,
+// //     stu_name: "Jimmy",
+// //     stu_subject: "Angular"
+// // }, get_data);
 
-// promises ----
+// // promises ----
 // const create_data = (new_data) => {
 //     return new Promise((resolve, reject) => {
 //         setTimeout(() => {
@@ -310,7 +314,7 @@ create_data({
 //             }
 
 
-//         }, 5000)
+//         }, 3000)
 //     })
 
 // }
@@ -330,7 +334,7 @@ create_data({
 //         `
 //         }
 //         console.log("data has been retrieved")
-//     }, 3000)
+//     }, 1000)
 // }
 // create_data({
 //     reg_no: 999884111,
@@ -342,18 +346,87 @@ create_data({
 //     console.log(`Error: ${error}`)
 // });
 // // async await---
-document.getElementById('fetch').addEventListener('click', fetchMovies)
+// document.getElementById('fetch').addEventListener('click', fetchMovies)
 
-async function fetchMovies() {
-    setTimeout(() => {
-        fetch('server.txt').then(res => {
-            return res.text();
-        }).then((data) => {
-            console.log(data)
-        });
-    }, 1000)
+// async function fetchMovies() {
+//     setTimeout(() => {
+//         fetch('server.txt').then(res => {
+//             return res.text();
+//         }).then((data) => {
+//             console.log(data)
+//         });
+//     }, 1000)
 
+// }
+
+// const date = new Date();
+// console.log(date);
+// const reg = async () => {
+
+//     const a = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(2);
+
+//         }, 3000)
+
+//     })
+//     const c = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(4);
+
+//         }, 4000)
+//     })
+//     let A = await a
+//     let B = await c
+//     return [A, B];
+
+// }
+// let c = reg();
+// console.log(c)
+// const newFunction=()=>{
+
+// }
+// (function (n) {
+//     console.log(n,"nn")
+
+//   })(10);
+// problem solving-------------
+// Find the maximum value in an array
+// const getMaxValue = [2,4,1,8,5,1,5]
+// let maxIndex = 0 
+// for (let index = 1; index < getMaxValue.length; index++) {
+//   if(getMaxValue[maxIndex]<getMaxValue[index])
+//   {
+//     maxIndex= index
+//   }
+// }
+// console.log(maxIndex,"is the capital of all")
+// reverse a String ----
+// const reverseString = "sarmad";
+// const output = reverseString.split("").reverse().join("")
+// console.log(output)
+// resursion -----
+// factorial-----
+// const recursion = (n) => {
+//   if (n == 0)
+//     return 1
+//   else
+//     return n * recursion(n - 1)
+// }
+// const result = recursion(7)
+// console.log(result, '..')
+// remove duplicates ----------------
+const removeDuplicates= [1,3,2,3,2]
+for (let index = 0; index < removeDuplicates.length; index++) {
+    var element = removeDuplicates[index];
+    console.log(element)
+
+
+};
+const allMatch = removeDuplicates.slice(1)
+for (let index = 0; index < allMatch.length; index++) {
+if(allMatch[index]===removeDuplicates[index])
+{
+   console.log('yes')
 }
-
-const date = new Date();
-console.log(date);
+}
